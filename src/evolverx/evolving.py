@@ -80,14 +80,6 @@ def _evolve(
     src = _get_source(func)
     tb = "".join(traceback.format_exception_only(type(err), err)).strip()
 
-    # Strengthen prompt after first failure to emphasize argument sanitization
-    extra_hint = ""
-    if attempts > 1:
-        extra_hint = (
-            "\nAdditionally, sanitize and normalize incoming arguments before use; "
-            "for URL strings, strip whitespace, remove embedded newlines, collapse spaces, "
-            "and ensure the path is valid.\n"
-        )
     prompt = _build_prompt(
         func.__name__,
         str(inspect.signature(func)),
@@ -95,7 +87,7 @@ def _evolve(
         src,
         args,
         kwargs,
-        tb + extra_hint,
+        tb,
         cfg,
     )
     body = llm.generate_function_body(prompt)
