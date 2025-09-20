@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "evolverx"
-version = "0.1.1"
+version = "0.1.2"
 description = "Self‑evolving decorator: fall back to LLM on failure, then persist clean Python for the happy path."
 readme = "README.md"
 authors = [{ name = "Vladimir Ponomarev", email = "vorba.dev@gmail.com" }]
@@ -24,6 +24,12 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
   "Topic :: Software Development :: Libraries",
 ]
+
+[project.urls]
+Homepage = "https://github.com/vorba-vp/evolverx"
+Repository = "https://github.com/vorba-vp/evolverx"
+Issues = "https://github.com/vorba-vp/evolverx/issues"
+Documentation = "https://github.com/vorba-vp/evolverx#readme"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
