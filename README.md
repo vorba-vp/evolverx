@@ -6,11 +6,26 @@ Status: experimental research prototype. Use in non‑critical environments, rev
 
 ## Installation
 
-- Python 3.10+
-- Clone this repo and install from source:
+Requires Python 3.10+.
+
+### From PyPI (recommended)
 
 ```powershell
-pip install -e .
+pip install evolverx
+```
+
+### With optional dev tools (tests, etc.)
+
+```powershell
+pip install evolverx[dev]
+```
+
+### From source (editable mode, for contributors)
+
+```powershell
+git clone https://github.com/vorba-vp/evolverx.git
+cd evolverx
+pip install -e .[dev]
 ```
 
 Set your LLM credentials and optional model:
@@ -70,11 +85,7 @@ If you want to commit generated code, set a tracked path: `EvolverxConfig(cache_
 
 The package ships a small CLI `evolverx` to inspect changes and clean cache.
 
-Install (from repo root):
-
-```powershell
-pip install -e .
-```
+If installed from PyPI you already have the CLI `evolverx` available; no extra step is required.
 
 Default cache location: `<project-root>/.evolverx/cache` unless overridden in `EvolverxConfig`.
 
