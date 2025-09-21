@@ -6,11 +6,15 @@
 __pycache__/
 *.py[cod]
 *.egg-info/
-
+/.mypy_cache/
+/.ruff_cache/
 
 # IDE files
 .vscode/
 .idea/
+
+# Distribution / packaging
+/dist/
 
 # Evolverx cache in consumer repos (recommended)
 .evolverx/
